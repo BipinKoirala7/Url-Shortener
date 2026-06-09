@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+:root {
+  --bg: #f5f5f7; /* page background */
+  --text: #1d1d1f; /* main text */
+  --primary: #556ee6; /* primary / action */
+  --accent: #7f9cf5; /* lighter primary */
+  --muted: #6e6e73; /* secondary text */
+  --card-bg: #ffffff; /* cards / forms */
+  --card-border: rgba(60, 60, 67, 0.12);
+  --input-bg: #ffffff;
+  --radius: 16px; /* default radius */
+  --card-shadow: 0 20px 45px rgba(60, 60, 67, 0.12);
+}
+
+body[data-theme="dark"] {
+  --bg: #000000;
+  --text: #f5f5f7;
+  --primary: #60a5fa;
+  --accent: #93c5fd;
+  --muted: #a1a1aa;
+  --card-bg: #1c1c1e;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --input-bg: #2c2c2e;
+  --card-shadow: 0 24px 55px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Global button tweaks for Chakra buttons */
+button.chakra-button {
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+}
+
+/* Small helper for muted text */
+.muted {
+  color: var(--muted);
+}
+
+::selection {
+  background: rgba(85, 110, 230, 0.2);
+}
