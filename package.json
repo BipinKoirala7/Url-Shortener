@@ -1,0 +1,21 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "URL Shortener Web Application is a user-friendly web-based tool that allows users to create shortened versions of long URLs, making them easier to share. This project is built using the MERN stack (MongoDB, Express, React, Node.js) and styled with Chakra UI for a visually appealing and responsive user interface.",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "npm run dev --prefix server",
+    "dev-client": "npm start --prefix client",
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server",
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "cd server && npx tsx src/server.ts"
+  },
+  "keywords": [],
+  "author": "Bipin Koirala",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
