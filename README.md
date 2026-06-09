@@ -1,72 +1,36 @@
 
-# URL Shortener Web Application
+# URL Shortener — Quick Pull & Run
 
-## Description
-URL Shortener Web Application is a user-friendly web-based tool that allows users to create shortened versions of long URLs, making them easier to share. This project is built using the MERN stack (MongoDB, Express, React, Node.js) and styled with Chakra UI for a visually appealing and responsive user interface.
+These commands let you pull the latest changes and start the app from the parent directory (one level above this repository). Replace "URL Shortener" below with the exact folder name if different.
 
-## Features
-- Shorten URLs: Convert long URLs into shortened versions with a single click.
-- Custom Short URLs (Optional): Create personalized and memorable links for your URLs.
-- Copy to Clipboard: Copy the shortened URL to the clipboard for easy sharing.
-- User-friendly Interface: Intuitive and responsive UI design for a seamless user experience.
+Quick start (dependencies already installed):
 
-## Demo
-![URL Shortener Demo](https://github.com/Akshay-Singh-Rajput/MERN-Stack-URL-Shortener/assets/97354310/8e5a29d2-1477-486d-bd9c-b9292fe8d224)
+```bash
+git -C "URL Shortener" pull
+npm --prefix "URL Shortener" run dev
+```
 
-## Live Demo
-Try out the live demo of the URL Shortener Web Application [here](https://lightlink.vercel.app).
+Pull, install dependencies, then start (first-time or after dependency changes):
 
-## Installation
-To run the URL Shortener Web Application locally, follow these steps:
+```bash
+git -C "URL Shortener" pull && npm --prefix "URL Shortener" run install-all && npm --prefix "URL Shortener" run dev
+```
 
-1. Clone the repository:
+Start server only (run from parent folder):
 
-2. Install dependencies for both frontend and backend:
-   
-```cd server```
-```npm install```
-```cd client```
-```npm install```
+```bash
+git -C "URL Shortener" pull && npm --prefix "URL Shortener" run start
+```
 
-4. Set up environment variables:
-- Create a `.env` file in the root directory and add the following:
-  ```
-  MONGODB_URI=your-mongodb-uri
-  PORT=your-port-number
-  ```
+Production build (client build + server start):
 
-4. Start the development server:
+```bash
+git -C "URL Shortener" pull && npm --prefix "URL Shortener" run build && npm --prefix "URL Shortener" run start
+```
 
-  -Server ```npm start```
-  -Client ```npm run dev```
+Notes
+- `npm run dev` (root) runs both client and server concurrently.
+- Environment variables (e.g. `MONGODB_URI`) must be set in the server environment or in a `.env` file under the project when starting the server.
+- If your directory name contains spaces keep the quotes as shown, or use the folder's escaped/path form.
 
-The URL Shortener Web Application will be running on `http://localhost:your-port-number`.
-
-## Usage
-1. Access the application at `http://localhost:your-port-number` in your web browser.
-2. Enter the long URL you want to shorten in the input field.
-3. Optionally, you can provide a custom short URL code for the link.
-4. Click the "Shorten URL" button to generate the shortened version.
-5. The shortened URL will be displayed in the output field, and it will be automatically copied to your clipboard for easy sharing.
-
-## Technologies Used
-- Frontend:
-- React
-- Chakra UI
-- React Router
-- Axios
-
-- Backend:
-- Node.js
-- Express
-- MongoDB (via Mongoose)
-
-## Deployment
-- Backend: Deployed on [Render](https://render.com)
-- Frontend: Deployed on [Vercel](https://vercel.com)
-
-## Contributing
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please create a new issue or submit a pull request.
-
-## Contact
-For any inquiries or questions, feel free to reach out via [email](mailto:akshaysinghr98@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/akshay-kumar046203/).
+If you'd like, I can also add a single-script wrapper in the parent folder to automate this further.
